@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>All-Weather: Прогноз погоды  </title>
+    <link rel = "stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="shortcut icon" href="images/ic half sun.png" type = "image/png">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+
+<div class ="wrapper">
+    <!-- Шапка и меню -->
+    <header class ="header">
+        <div class="container">
+            <div class="header_body">
+                <a href="main_page.html" class = "header_logo">
+                    <img src="images/2.png">
+                </a>
+                <div class="header_your_city" > Ваш город: <span id="currentcity"></span></div>
+                <div class="header_menu">
+                    <span></span>
+                </div>
+                <nav class="menu">
+                    <ul class="header_list">
+                        <li>
+                            <a href="chose_city.html" class="header_link">Выбрать город</a>
+                        </li>
+                        <li>
+                            <span class="header_link_your_city">Ваш город: <span id="currentcity1"></span></span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Основная информация -->
+    <div class="content">
+        <div class="container">
+            <div class="container_text">
+                <h1> Погода в городе <span id="currentcity2"></span> </h1>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+    }
+    var city_coded = getUrlVars()["city"];
+    var city = decodeURIComponent(city_coded);
+    for (let i = 0; i < city.length; i++){
+        if (city[i] === '+') {
+            city = city.replace(city[i], " ");
+        }
+    }
+    document.getElementById("currentcity").innerHTML = city;
+    document.getElementById("currentcity1").innerHTML = city;
+    document.getElementById("currentcity2").innerHTML = city;
+    </script>
+</div>
+</body>
+</html>
