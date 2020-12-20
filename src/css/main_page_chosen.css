@@ -1,0 +1,414 @@
+.container_text{
+    padding: 20px 0 0 0;
+}
+
+city_name_header{
+    font-family: "Bebas Neue Bold";
+    font-size: 600%;
+}
+
+.button{
+    font-family: "Bebas Neue Bold";
+    font-size: 20px;
+    margin: 0 10px 10px 0;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #bababa;
+    border-radius: 15px;
+}
+
+.note{
+    font-family: "Bebas Neue Bold";
+    font-size: 300%;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.main_img{
+    max-width: 150px;
+    height: auto;
+}
+
+.side_img{
+    padding: 0 10px;
+    max-width: 40px;
+    height: auto;
+}
+
+.side_img_2{
+    padding: 0 10px;
+    max-width: 60px;
+    height: auto;
+}
+
+.side_img_3{
+    padding: 0 10px;
+    max-width: 80px;
+    height: auto;
+}
+
+/*------------------------------------------------Прогноз на сегодня--------------------------------------------------*/
+
+.today{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "PF Din Text Cond Pro";
+    margin-bottom: 50px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: fit-content;
+}
+
+    .first_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+        padding: 0 50px;
+    }
+
+    .first_block:hover{
+        transform: scale(1.01);
+    }
+
+        .first_first_block{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 700%;
+
+        }
+        .first_second_block{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 150%;
+
+        }
+
+
+    .second_block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        border: 1px solid #bababa;
+    }
+
+        .second_first_block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 200%;
+            padding: 30px;
+            border: 1px solid #bababa;
+            transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+        }
+        .second_first_block img {
+            padding: 20px 0;
+        }
+
+.second_first_block:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*-------------------------------------------------Прогноз на неделю--------------------------------------------------*/
+
+.week{
+    font-family: "PF Din Text Cond Pro";
+    margin-bottom: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .week_first_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 300%;
+        padding: 30px;
+        border: 1px solid #bababa;
+        transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .week_first_block:hover{
+        transform: scale(1.01);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .week_first_block p{
+        margin: 0px;
+    }
+
+    smalldeg{
+        font-size: 70%;
+        color: grey;
+    }
+
+    wknd{
+        color: red;
+    }
+
+day_name{
+    font-size: 80%;
+}
+
+/*--------------------------------------------------Прогноз на месяц--------------------------------------------------*/
+
+.month{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.month .week{
+    margin: 0px;
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+}
+
+.month .week:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.expired{
+    color: #6d6f72;
+}
+
+
+.month .week_first_block{
+    transition: none;
+    min-width: 150px;
+}
+
+.month .week_first_block:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+
+
+
+
+/*---------------------------------------------------Адаптивность----------------------------------------------------*/
+@media (max-width: 500px) {
+    city_name_header{
+        font-size: 200%;
+    }
+
+    .note{
+        font-size: 100%;
+        padding-bottom: 5px;
+    }
+
+    .main_img{
+        max-width: 50px;
+    }
+
+    .side_img{
+        padding: 0 5px;
+        max-width: 20px;
+    }
+
+    .side_img_2{
+        padding: 0 5px;
+        max-width: 30px;
+    }
+
+    .side_img_3{
+        padding: 0 5px;
+        max-width: 15px;
+    }
+
+    .today{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding: 5px;
+        flex-direction: column;
+        font-size: 60%;
+    }
+
+    .first_block{
+        padding: 10px 20px;
+
+    }
+    .second_first_block{
+        padding: 5px;
+    }
+
+    .week{
+        font-size: 50%;
+        padding: 5px 1px;
+        margin-bottom: 20px;
+    }
+
+    .week_first_block{
+        font-size: 200%;
+        padding: 5px;
+    }
+
+    .month .week_first_block{
+        min-width: 35px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 501px) {
+    city_name_header{
+        font-size: 300%;
+    }
+
+    .note{
+        font-size: 200%;
+    }
+
+    .main_img{
+        max-width: 80px;
+    }
+
+    .side_img{
+        padding: 0 10px;
+        max-width: 30px;
+    }
+
+    .side_img_2{
+        padding: 0 10px;
+        max-width: 40px;
+    }
+
+    .side_img_3{
+        padding: 0 10px;
+        max-width: 30px;
+    }
+
+    .today{
+        margin-bottom: 20px;
+        padding: 5px;
+        flex-direction: column;
+        font-size: 80%;
+    }
+
+    .first_block{
+        padding: 10px 20px;
+    }
+
+    .second_first_block{
+        padding: 7px;
+    }
+
+    .week{
+        font-size: 70%;
+        padding: 5px;
+    }
+
+    .week_first_block{
+        font-size: 200%;
+        padding: 5px;
+    }
+
+    .month .week_first_block{
+        min-width: 60px;
+        min-height: 150px;
+    }
+
+    .month .week{
+
+    }
+}
+
+@media  (max-width: 970px) and (min-width: 769px){
+    .month .week_first_block{
+        min-width: 110px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 769px) {
+    city_name_header{
+        font-size: 400%;
+    }
+
+    .note{
+        font-size: 200%;
+    }
+
+    .main_img{
+        max-width: 100px;
+    }
+
+    .side_img{
+        padding: 0 10px;
+        max-width: 30px;
+    }
+
+    .side_img_2{
+        padding: 5px 10px;
+        max-width: 50px;
+    }
+
+    .side_img_3{
+        padding: 0 10px;
+        max-width: 45px;
+    }
+
+    .today{
+        margin-bottom: 20px;
+        padding: 5px;
+        font-size: 100%;
+    }
+
+    .first_block{
+        padding: 0 20px;
+    }
+
+    .second_first_block{
+        padding: 15px;
+    }
+
+    .week{
+        font-size: 150%;
+        padding: 5px;
+    }
+
+    .week_first_block{
+        font-size: 150%;
+        padding: 15px;
+    }
+
+    .month .week_first_block{
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 1500px) and (min-width: 1400px){
+    .month .week_first_block{
+        min-width: 130px;
+    }
+}
+
+@font-face {
+    font-family: "PF Din Text Cond Pro";
+    src:  url("../fonts/PF Din Text Cond Pro.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

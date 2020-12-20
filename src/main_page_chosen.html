@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>All-Weather: Прогноз погоды  </title>
-    <link rel = "stylesheet" href="style.css" type="text/css">
+    <link rel = "stylesheet" href="css/style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <link rel="shortcut icon" href="images/ic half sun.png" type = "image/png">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="css/main_page_chosen.css" type="text/css">
+
 </head>
 <body>
 
@@ -19,7 +21,7 @@
     <header class ="header">
         <div class="container">
             <div class="header_body">
-                <a href="main_page.html" class = "header_logo">
+                <a href="index.html" class = "header_logo">
                     <img src="images/2.png">
                 </a>
                 <div class="header_your_city" > Ваш город: <span id="currentcity"></span></div>
@@ -29,7 +31,7 @@
                 <nav class="menu">
                     <ul class="header_list">
                         <li>
-                            <a href="chose_city.html" class="header_link">Выбрать город</a>
+                            <a href="choose_city.html" class="header_link">Выбрать город</a>
                         </li>
                         <li>
                             <span class="header_link_your_city">Ваш город: <span id="currentcity1"></span></span>
@@ -45,32 +47,312 @@
     <div class="content">
         <div class="container">
             <div class="container_text">
-                <h1> Погода в городе <span id="currentcity2"></span> </h1>
-                
+                <city_name_header> Погода в городе <span id="currentcity2"></span> </city_name_header>
+            </div>
+            <hr>
+            <p class="note">Сегодня: </p>
+            <div class="today">
+                <div class="first_block">
+                    <div class="first_first_block">
+                        <img src="images/ic sky.png" class="main_img">+2&deg;
+                    </div>
+                    <div class="first_second_block">
+                        <img src="images/ic wind.png" class="side_img">  1 м/с ю-з
+                    </div>
+                    <div class="first_second_block">
+                        <img src="images/pressure.png" class="side_img">  765 мм рт. ст.
+                    </div>
+                    <div class="first_second_block">
+                        <img src="images/ic water.png" class="side_img">  86%
+                    </div>
+                </div>
+                <div class="second_block">
+
+                    <div class="second_first_block">
+                        04:00
+                        <img src="images/ic sky.png" class="side_img_2">
+                        -2&deg;
+                    </div>
+
+                    <div class="second_first_block">
+                        8:00
+                        <img src="images/ic sky.png" class="side_img_2">
+                        +1&deg;
+                    </div>
+
+                    <div class="second_first_block">
+                        12:00
+                        <img src="images/ic weather 1.png" class="side_img_2">
+                        +4&deg;
+                    </div>
+
+                    <div class="second_first_block">
+                        16:00
+                        <img src="images/ic weather 1.png" class="side_img_2">
+                        +3&deg;
+                    </div>
+
+                    <div class="second_first_block">
+                        20:00
+                        <img src="images/ic sky.png" class="side_img_2">
+                        +1&deg;
+                    </div>
+
+                    <div class="second_first_block">
+                        00:00
+                        <img src="images/ic sky.png" class="side_img_2">
+                        0&deg;
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="note">На неделю: </p>
+            <div class="week">
+                <div class="week_first_block">
+                    <day_name>Пт<br> 18 дек</day_name>
+                    <img src="images/ic weather 1.png" class="side_img_3">
+                    +4&deg;
+                    <smalldeg> -2&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name><wknd>Сб <br>19 дек</wknd></day_name>
+                    <img src="images/ic weather 34.png" class="side_img_3">
+                    0&deg;
+                    <smalldeg> -5&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name><wknd>Вс <br>20 дек</wknd></day_name>
+                    <img src="images/ic weather 43.png" class="side_img_3">
+                    -1&deg;
+                    <smalldeg> -4&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name>Пн <br>21 дек</day_name>
+                    <img src="images/ic weather 44.png" class="side_img_3">
+                    -3&deg;
+                    <smalldeg> -5&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name>Вт <br>22 дек</day_name>
+                    <img src="images/ic sky.png" class="side_img_3">
+                    -1&deg;
+                    <smalldeg> -3&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name>Ср <br>23 дек</day_name>
+                    <img src="images/ic weather 1.png" class="side_img_3">
+                    -5&deg;
+                    <smalldeg> -7&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name>Чт <br>24 дек</day_name>
+                    <img src="images/ic weather 1.png" class="side_img_3">
+                    -6&deg;
+                    <smalldeg> -7&deg;</smalldeg>
+                </div>
+                <div class="week_first_block">
+                    <day_name>Пт <br>25 дек</day_name>
+                    <img src="images/ic sky.png" class="side_img_3">
+                    -3&deg;
+                    <smalldeg> -3&deg;</smalldeg>
+                </div>
+            </div>
+            <hr>
+            <p class="note">На месяц: </p>
+            <div class="month">
+                <div class="month_week">
+                    <div class="week">
+                        <div class="week_first_block expired">
+                            <day_name>Пн<br>14 дек</day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            +4&deg;
+                            <smalldeg> -2&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block expired">
+                            <day_name>Вт<br>15 дек</day_name>
+                            <img src="images/ic weather 34.png" class="side_img_3">
+                            0&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block expired">
+                            <day_name>Ср<br>16 дек</day_name>
+                            <img src="images/ic weather 43.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -4&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block expired">
+                            <day_name>Чт<br>17 дек</day_name>
+                            <img src="images/ic weather 44.png" class="side_img_3">
+                            -3&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Пт<br>18 дек</day_name>
+                            <img src="images/ic sky.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -3&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Сб<br>19 дек </wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -5&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Вс<br>20 дек</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -6&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="month_week">
+                    <div class="week">
+                        <div class="week_first_block">
+                            <day_name>Пн<br>21 дек</day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            +4&deg;
+                            <smalldeg> -2&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Вт<br>22 дек</day_name>
+                            <img src="images/ic weather 34.png" class="side_img_3">
+                            0&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Ср<br>23 дек</day_name>
+                            <img src="images/ic weather 43.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -4&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Чт<br>24 дек</day_name>
+                            <img src="images/ic weather 44.png" class="side_img_3">
+                            -3&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Пт<br>25 дек</day_name>
+                            <img src="images/ic sky.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -3&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Сб<br>26 дек</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -5&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Вс<br>27 дек</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -6&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                    </div>
+                </div>
+                <div class="month_week">
+                    <div class="week">
+                        <div class="week_first_block">
+                            <day_name>Пн<br>28 дек</day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            +4&deg;
+                            <smalldeg> -2&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Вт<br>29 дек</day_name>
+                            <img src="images/ic weather 34.png" class="side_img_3">
+                            0&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Ср<br>30 дек</day_name>
+                            <img src="images/ic weather 43.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -4&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Чт<br>31 дек</day_name>
+                            <img src="images/ic weather 44.png" class="side_img_3">
+                            -3&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Пт<br>1 янв</day_name>
+                            <img src="images/ic sky.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -3&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Сб<br>2 янв</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -5&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Вс<br>3 янв</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -6&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                    </div>
+                </div>
+                <div class="month_week">
+                    <div class="week">
+                        <div class="week_first_block">
+                            <day_name>Пн<br>4 янв</day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            +4&deg;
+                            <smalldeg> -2&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Вт<br>5 янв</day_name>
+                            <img src="images/ic weather 34.png" class="side_img_3">
+                            0&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Ср<br>6 янв</day_name>
+                            <img src="images/ic weather 43.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -4&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Чт<br>7 янв</day_name>
+                            <img src="images/ic weather 44.png" class="side_img_3">
+                            -3&deg;
+                            <smalldeg> -5&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name>Пт<br>8 янв</day_name>
+                            <img src="images/ic sky.png" class="side_img_3">
+                            -1&deg;
+                            <smalldeg> -3&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Сб<br>9 янв</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -5&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                        <div class="week_first_block">
+                            <day_name><wknd>Вс<br>10 янв</wknd></day_name>
+                            <img src="images/ic weather 1.png" class="side_img_3">
+                            -6&deg;
+                            <smalldeg> -7&deg;</smalldeg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <script>
-    function getUrlVars() {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-          vars[key] = value;
-        });
-        return vars;
-    }
-    var city_coded = getUrlVars()["city"];
-    var city = decodeURIComponent(city_coded);
-    for (let i = 0; i < city.length; i++){
-        if (city[i] === '+') {
-            city = city.replace(city[i], " ");
-        }
-    }
-    document.getElementById("currentcity").innerHTML = city;
-    document.getElementById("currentcity1").innerHTML = city;
-    document.getElementById("currentcity2").innerHTML = city;
-    </script>
+
+
+<script src="change_city.js"></script>
 </div>
 </body>
 </html>
